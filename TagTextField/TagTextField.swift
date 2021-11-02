@@ -9,35 +9,35 @@ import SwiftUI
 import UIKit
 
 public struct TagTheme {
-    var font: Font = Font.system(size: 14)
-    var foregroundColor: Color = Color(.sRGB, red: 45.0/255.0, green: 45.0/255.0, blue: 45.0/255.0, opacity: 1)
-    var backgroundColor: Color = Color.white
-    var borderColor: Color = Color(.sRGB, red: 224.0/255.0, green: 224.0/255.0, blue: 225.0/255.0, opacity: 1)
-    var shadowColor: Color = Color(.sRGB, red: 151.0/255.0, green: 151.0/255.0, blue: 154.0/255.0, opacity: 1).opacity(0.4)
-    var shadowRadius: CGFloat = 5
-    var cornerRadius: CGFloat = 13
+    public var font: Font = Font.system(size: 14)
+    public var foregroundColor: Color = Color(.sRGB, red: 45.0/255.0, green: 45.0/255.0, blue: 45.0/255.0, opacity: 1)
+    public var backgroundColor: Color = Color.white
+    public var borderColor: Color = Color(.sRGB, red: 224.0/255.0, green: 224.0/255.0, blue: 225.0/255.0, opacity: 1)
+    public var shadowColor: Color = Color(.sRGB, red: 151.0/255.0, green: 151.0/255.0, blue: 154.0/255.0, opacity: 1).opacity(0.4)
+    public var shadowRadius: CGFloat = 5
+    public var cornerRadius: CGFloat = 13
     
-    var deletable: Bool = true
-    var deleteButtonSize: CGFloat = 12
-    var deleteButtonColor: Color = Color(.sRGB, red: 151.0/255.0, green: 151.0/255.0, blue: 154.0/255.0, opacity: 1)
-    var deleteButtonSystemImageName: String = "xmark"
+    public var deletable: Bool = true
+    public var deleteButtonSize: CGFloat = 12
+    public var deleteButtonColor: Color = Color(.sRGB, red: 151.0/255.0, green: 151.0/255.0, blue: 154.0/255.0, opacity: 1)
+    public var deleteButtonSystemImageName: String = "xmark"
     
-    var spacing: CGFloat = 5.0
-    var alignment: HorizontalAlignment = .leading
+    public var spacing: CGFloat = 5.0
+    public var alignment: HorizontalAlignment = .leading
     
-    var inputFieldFont: Font = Font.system(size: 14)
-    var inputFieldTextColor: Color = Color(.sRGB, red: 45.0/255.0, green: 45.0/255.0, blue: 45.0/255.0, opacity: 1)
+    public var inputFieldFont: Font = Font.system(size: 14)
+    public var inputFieldTextColor: Color = Color(.sRGB, red: 45.0/255.0, green: 45.0/255.0, blue: 45.0/255.0, opacity: 1)
     
-    var contentInsets: EdgeInsets = EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10)
+    public var contentInsets: EdgeInsets = EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10)
 }
 
 public struct TagTextField: View {
-    @Binding var tags: [String]
-    @Binding var keyword: String
+    @Binding public var tags: [String]
+    @Binding public var keyword: String
     
-    var theme: TagTheme = TagTheme()
-    var placeholder: String = ""
-    var checkKeyword: ((String) -> String?)? = { $0 } //this is a closure is to get a candidate for the currently inputed text
+    public var theme: TagTheme = TagTheme()
+    public var placeholder: String = ""
+    public var checkKeyword: ((String) -> String?)? = { $0 } //this is a closure is to get a candidate for the currently inputed text
         
     @State private var availableWidth: CGFloat = 0
     @State private var elementsSize: [String: CGSize] = [:]
